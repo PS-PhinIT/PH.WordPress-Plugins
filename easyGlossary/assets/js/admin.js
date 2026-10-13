@@ -235,11 +235,12 @@
             
             // Create preview
             const $preview = $('<div class="tooltip-preview">')
-                .html('<div class="glossary-tooltip-container ' + style + ' show">' +
+                .html('<div class="glossary-tooltip-container show">' +
                       '<div class="tooltip-title">Beispiel Begriff</div>' +
                       '<div class="tooltip-content">Dies ist eine Beispiel-Beschreibung für den Tooltip.</div>' +
                       '<a href="#" class="tooltip-link">Mehr erfahren →</a>' +
                       '</div>');
+            $preview.find('.glossary-tooltip-container').addClass(style);
                       
             $('select[name="tooltip_style"]').after($preview);
             
